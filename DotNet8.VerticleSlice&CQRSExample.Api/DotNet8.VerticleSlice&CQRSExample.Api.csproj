@@ -28,4 +28,8 @@
 	  <ProjectReference Include="..\DotNet8.VerticleSlice&amp;CQRSExample.Models\DotNet8.VerticleSlice&amp;CQRSExample.Models.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Controllers\" />
+	</ItemGroup>
+
 </Project>
