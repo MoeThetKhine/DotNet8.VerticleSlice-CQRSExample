@@ -29,7 +29,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Controllers\" />
+	  <Folder Include="Features\Blog\Command\CreateBlog\" />
+	  <Folder Include="Features\Blog\Command\DeleteBlog\" />
+	  <Folder Include="Features\Blog\Command\UpdateBlog\" />
+	  <Folder Include="Features\Blog\Queries\GetBlogById\" />
+	  <Folder Include="Features\Blog\Queries\GetBlogList\" />
 	</ItemGroup>
 
 </Project>
