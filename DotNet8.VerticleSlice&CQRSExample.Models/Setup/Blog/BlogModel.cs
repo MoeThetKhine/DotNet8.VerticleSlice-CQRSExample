@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DotNet8.VerticleSlice_CQRSExample.Models.Setup.Blog
 {
-	internal class BlogModel
+	public class BlogModel
 	{
 	}
 }
