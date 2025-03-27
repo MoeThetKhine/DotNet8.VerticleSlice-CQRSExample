@@ -5,6 +5,8 @@ namespace DotNet8.VerticleSlice_CQRSExample.Models;
 
 public static class ChangeModel
 {
+	#region Blog Model
+
 	public static BlogModel Change(this TblBlog dataModel)
 	{
 		return new BlogModel
@@ -15,6 +17,8 @@ public static class ChangeModel
 			BlogContent = dataModel.BlogContent,
 		};
 	}
+
+	#endregion
 
 	public static TblBlog Change(this BlogRequestModel requestModel)
 	{
