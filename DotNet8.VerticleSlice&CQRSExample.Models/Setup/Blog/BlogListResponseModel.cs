@@ -1,7 +1,6 @@
-﻿namespace DotNet8.VerticleSlice_CQRSExample.Models.Setup.Blog
+﻿namespace DotNet8.VerticleSlice_CQRSExample.Models.Setup.Blog;
+
+public class BlogListResponseModel
 {
-	public class BlogListResponseModel
-	{
-		public List<BlogModel> DataLst { get; set; }
-	}
+	public List<BlogModel> DataLst { get; set; }
 }
