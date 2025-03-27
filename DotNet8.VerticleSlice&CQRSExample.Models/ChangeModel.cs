@@ -1,7 +1,4 @@
-﻿using DotNet8.VerticleSlice_CQRSExample.DbService.AppDbContextModels;
-using DotNet8.VerticleSlice_CQRSExample.Models.Setup.Blog;
-
-namespace DotNet8.VerticleSlice_CQRSExample.Models;
+﻿namespace DotNet8.VerticleSlice_CQRSExample.Models;
 
 public static class ChangeModel
 {
