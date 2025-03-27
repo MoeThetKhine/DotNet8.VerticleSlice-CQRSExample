@@ -1,10 +1,5 @@
 ﻿using DotNet8.VerticleSlice_CQRSExample.DbService.AppDbContextModels;
 using DotNet8.VerticleSlice_CQRSExample.Models.Setup.Blog;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DotNet8.VerticleSlice_CQRSExample.Models
 {
