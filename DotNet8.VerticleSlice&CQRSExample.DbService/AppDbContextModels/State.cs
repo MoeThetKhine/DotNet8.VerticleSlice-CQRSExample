@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace DotNet8.VerticleSlice_CQRSExample.DbService.AppDbContextModels;
+﻿namespace DotNet8.VerticleSlice_CQRSExample.DbService.AppDbContextModels;
 
 public partial class State
 {
