@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DotNet8.VerticleSlice_CQRSExample.Models
 {
-	internal class ChangeModel
+	public class ChangeModel
 	{
 	}
 }
