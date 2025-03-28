@@ -1,8 +1,12 @@
+using DotNet8.VerticleSlice_CQRSExample.Api;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddServices(builder);
 
 var app = builder.Build();
 
