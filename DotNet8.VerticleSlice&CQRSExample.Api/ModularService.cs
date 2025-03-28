@@ -21,11 +21,15 @@ public static class ModularService
 
 	#endregion
 
+	#region AddRepositoryServices
+
 	private static IServiceCollection AddRepositoryServices(this IServiceCollection services)
 	{
 		services.AddScoped<IBlogRepository, BlogRepository>();
 		return services;
 	}
+
+	#endregion
 
 	private static IServiceCollection AddDbContextService(this IServiceCollection services, WebApplicationBuilder builder)
 	{
