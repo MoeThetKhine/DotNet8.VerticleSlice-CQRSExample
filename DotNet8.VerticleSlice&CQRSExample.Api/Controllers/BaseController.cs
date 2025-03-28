@@ -12,5 +12,20 @@ namespace DotNet8.VerticleSlice_CQRSExample.Api.Controllers
 		{
 			return Content(JsonConvert.SerializeObject(obj), "application/json");
 		}
+
+		protected IActionResult InternalServerError(Exception ex)
+		{
+			return StatusCode(500, ex.Message);
+		}
+
+		protected IActionResult Created(string message)
+		{
+			return StatusCode(201, message);
+		}
+
+		protected IActionResult Accepted(string message)
+		{
+			return StatusCode(202, message);
+		}
 	}
 }
