@@ -1,5 +1,3 @@
-using DotNet8.VerticleSlice_CQRSExample.Api;
-
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
