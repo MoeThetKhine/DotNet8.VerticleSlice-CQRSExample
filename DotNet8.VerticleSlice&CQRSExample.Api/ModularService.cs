@@ -29,6 +29,16 @@ namespace DotNet8.VerticleSlice_CQRSExample.Api
 			return services;
 		}
 
+		private static IServiceCollection AddJsonServices(this IServiceCollection services)
+		{
+			services.AddControllers().AddJsonOptions(opt =>
+			{
+				opt.JsonSerializerOptions.PropertyNamingPolicy = null;
+			});
+
+			return services;
+		}
+
 
 	}
 }
