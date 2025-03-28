@@ -6,6 +6,9 @@ namespace DotNet8.VerticleSlice_CQRSExample.Api;
 
 public static class ModularService
 {
+
+	#region AddServices
+
 	public static IServiceCollection AddServices(this IServiceCollection services, WebApplicationBuilder builder)
 	{
 		services.AddRepositoryServices()
@@ -15,6 +18,8 @@ public static class ModularService
 
 		return services;
 	}
+
+	#endregion
 
 	private static IServiceCollection AddRepositoryServices(this IServiceCollection services)
 	{
