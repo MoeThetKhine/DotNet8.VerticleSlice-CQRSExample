@@ -45,11 +45,15 @@ public static class ModularService
 
 	#endregion
 
+	#region AddMediatRService
+
 	private static IServiceCollection AddMediatRService(this IServiceCollection services)
 	{
 		services.AddMediatR(cf => cf.RegisterServicesFromAssembly(typeof(Program).Assembly));
 		return services;
 	}
+
+	#endregion
 
 	private static IServiceCollection AddJsonServices(this IServiceCollection services)
 	{
