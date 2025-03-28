@@ -36,4 +36,5 @@ public class BlogRepository : IBlogRepository
 	}
 
 	#endregion
+
 }
