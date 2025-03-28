@@ -1,6 +1,5 @@
-﻿namespace DotNet8.VerticleSlice_CQRSExample.Api.Repositories.Blog
+﻿namespace DotNet8.VerticleSlice_CQRSExample.Api.Repositories.Blog;
+
+public interface IBlogRepository
 {
-	public interface IBlogRepository
-	{
-	}
 }
