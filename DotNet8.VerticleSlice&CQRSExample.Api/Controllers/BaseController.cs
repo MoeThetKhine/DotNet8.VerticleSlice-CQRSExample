@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-
-namespace DotNet8.VerticleSlice_CQRSExample.Api.Controllers;
+﻿namespace DotNet8.VerticleSlice_CQRSExample.Api.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
