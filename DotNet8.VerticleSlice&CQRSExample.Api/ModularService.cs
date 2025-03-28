@@ -22,7 +22,13 @@ namespace DotNet8.VerticleSlice_CQRSExample.Api
 
 			return services;
 		}
-		
+
+		private static IServiceCollection AddMediatRService(this IServiceCollection services)
+		{
+			services.AddMediatR(cf => cf.RegisterServicesFromAssembly(typeof(Program).Assembly));
+			return services;
+		}
+
 
 	}
 }
