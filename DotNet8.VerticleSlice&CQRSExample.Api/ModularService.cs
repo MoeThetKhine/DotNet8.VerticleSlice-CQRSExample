@@ -31,6 +31,8 @@ public static class ModularService
 
 	#endregion
 
+	#region AddDbContextService
+
 	private static IServiceCollection AddDbContextService(this IServiceCollection services, WebApplicationBuilder builder)
 	{
 		builder.Services.AddDbContext<AppDbContext>(opt =>
@@ -40,6 +42,8 @@ public static class ModularService
 
 		return services;
 	}
+
+	#endregion
 
 	private static IServiceCollection AddMediatRService(this IServiceCollection services)
 	{
