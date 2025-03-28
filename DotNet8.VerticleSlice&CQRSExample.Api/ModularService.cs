@@ -1,8 +1,4 @@
-﻿using DotNet8.VerticleSlice_CQRSExample.Api.Repositories.Blog;
-using DotNet8.VerticleSlice_CQRSExample.DbService.AppDbContextModels;
-using Microsoft.EntityFrameworkCore;
-
-namespace DotNet8.VerticleSlice_CQRSExample.Api;
+﻿namespace DotNet8.VerticleSlice_CQRSExample.Api;
 
 public static class ModularService
 {
