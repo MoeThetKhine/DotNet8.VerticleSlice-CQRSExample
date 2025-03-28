@@ -35,9 +35,13 @@ namespace DotNet8.VerticleSlice_CQRSExample.Api.Controllers
 
 		#endregion
 
+		#region Accepted
+
 		protected IActionResult Accepted(string message)
 		{
 			return StatusCode(202, message);
 		}
+
+		#endregion
 	}
 }
