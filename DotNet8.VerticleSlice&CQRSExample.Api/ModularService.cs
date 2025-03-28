@@ -1,4 +1,6 @@
 ﻿using DotNet8.VerticleSlice_CQRSExample.Api.Repositories.Blog;
+using DotNet8.VerticleSlice_CQRSExample.DbService.AppDbContextModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace DotNet8.VerticleSlice_CQRSExample.Api
 {
@@ -10,6 +12,17 @@ namespace DotNet8.VerticleSlice_CQRSExample.Api
 			services.AddScoped<IBlogRepository, BlogRepository>();
 			return services;
 		}
+
+		private static IServiceCollection AddDbContextService(this IServiceCollection services, WebApplicationBuilder builder)
+		{
+			builder.Services.AddDbContext<AppDbContext>(opt =>
+			{
+				opt.UseSqlServer(builder.Configuration.GetConnectionString("DbConnection"));
+			}, ServiceLifetime.Transient);
+
+			return services;
+		}
+		
 
 	}
 }
