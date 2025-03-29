@@ -15,6 +15,8 @@ namespace DotNet8.VerticleSlice_CQRSExample.Api.Controllers.Blog
 			_mediator = mediator;
 		}
 
+		#region GetBlogs
+
 		[HttpGet]
 		public async Task<IActionResult> GetBlogs()
 		{
@@ -30,5 +32,7 @@ namespace DotNet8.VerticleSlice_CQRSExample.Api.Controllers.Blog
 				return InternalServerError(ex);
 			}
 		}
+
+		#endregion
 	}
 }
