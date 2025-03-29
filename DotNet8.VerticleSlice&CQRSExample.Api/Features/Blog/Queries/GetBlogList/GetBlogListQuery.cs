@@ -1,6 +1,8 @@
-﻿namespace DotNet8.VerticleSlice_CQRSExample.Api.Features.Blog.Queries.GetBlogList
+﻿using MediatR;
+
+namespace DotNet8.VerticleSlice_CQRSExample.Api.Features.Blog.Queries.GetBlogList
 {
-	public class GetBlogListQuery
+	public class GetBlogListQuery : IRequest<BlogListResponseModel>
 	{
 	}
 }
