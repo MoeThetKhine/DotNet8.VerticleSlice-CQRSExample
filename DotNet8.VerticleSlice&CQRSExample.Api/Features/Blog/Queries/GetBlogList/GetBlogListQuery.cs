@@ -1,6 +1,4 @@
-﻿using MediatR;
-
-namespace DotNet8.VerticleSlice_CQRSExample.Api.Features.Blog.Queries.GetBlogList;
+﻿namespace DotNet8.VerticleSlice_CQRSExample.Api.Features.Blog.Queries.GetBlogList;
 
 #region GetBlogListQuery
 
