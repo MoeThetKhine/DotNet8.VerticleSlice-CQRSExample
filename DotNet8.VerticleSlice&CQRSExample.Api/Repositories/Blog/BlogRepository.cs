@@ -11,7 +11,7 @@ public class BlogRepository : IBlogRepository
 
 	#region GetBlogListAsync
 
-	public async Task<BlogListResponseModel> GetBlogListAsync()
+	public async Task<BlogListResponseModel> GetBlogsAsync()
 	{
 		try
 		{
