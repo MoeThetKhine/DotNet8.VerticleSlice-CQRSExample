@@ -8,6 +8,7 @@ public interface IBlogRepository
 	Task<BlogModel> GetBlogByIdAsync(long id);
 	Task<int> CreateBlogAsync(BlogRequestModel requestModel);
 	Task<int> UpdateBlogAsync(BlogRequestModel requestModel, long id);
+	Task<int> DeleteBlogAsync(long id);
 }
 
 #endregion
