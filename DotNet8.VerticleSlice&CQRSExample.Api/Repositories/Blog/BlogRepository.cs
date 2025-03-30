@@ -37,4 +37,26 @@ public class BlogRepository : IBlogRepository
 
 	#endregion
 
+	#region GetBlogByIdAsync
+
+	public async Task<BlogModel> GetBlogByIdAsync(long id)
+	{
+		try
+		{
+			var item = await _appDbContext.TblBlogs
+				.AsNoTracking()
+				.FirstOrDefaultAsync(x => x.BlogId == id)
+				?? throw new Exception("No data found");
+
+			return item.Change();
+
+		}
+		catch (Exception ex)
+		{
+			throw new Exception(ex.Message);
+		}
+	}
+
+	#endregion
+
 }
