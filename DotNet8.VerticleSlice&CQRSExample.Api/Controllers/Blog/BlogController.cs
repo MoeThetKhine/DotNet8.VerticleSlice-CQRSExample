@@ -73,6 +73,8 @@ public class BlogController : BaseController
 
 	#endregion
 
+	#region PatchBlog
+
 	[HttpPut("{id}")]
 	public async Task<IActionResult> PatchBlog([FromBody] BlogRequestModel requestModel, long id)
 	{
@@ -92,5 +94,7 @@ public class BlogController : BaseController
 			return InternalServerError(ex);
 		}
 	}
+
+	#endregion
 
 }
