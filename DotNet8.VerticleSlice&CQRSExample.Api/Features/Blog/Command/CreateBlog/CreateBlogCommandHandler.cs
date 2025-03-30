@@ -1,5 +1,7 @@
 ﻿namespace DotNet8.VerticleSlice_CQRSExample.Api.Features.Blog.Command.CreateBlog;
 
+#region CreateBlogCommandHandler
+
 public class CreateBlogCommandHandler : IRequestHandler<CreateBlogCommand , int>
 {
 	private readonly IBlogRepository _blogRepository;
@@ -23,3 +25,5 @@ public class CreateBlogCommandHandler : IRequestHandler<CreateBlogCommand , int>
 		return await _blogRepository.CreateBlogAsync(request.BlogRequestModel);
 	}
 }
+
+#endregion
