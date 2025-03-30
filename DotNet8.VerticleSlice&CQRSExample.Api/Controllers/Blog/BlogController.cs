@@ -1,4 +1,6 @@
-﻿namespace DotNet8.VerticleSlice_CQRSExample.Api.Controllers.Blog;
+﻿using DotNet8.VerticleSlice_CQRSExample.Api.Features.Blog.Command.CreateBlog;
+
+namespace DotNet8.VerticleSlice_CQRSExample.Api.Controllers.Blog;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -50,5 +52,21 @@ public class BlogController : BaseController
 	}
 
 	#endregion
+
+	[HttpPost]
+	public async Task<IActionResult> CreateBlog([FromBody] BlogRequestModel requestModel)
+	{
+		try
+		{
+			var command = new CreateBlogCommand() { BlogRequestModel = requestModel };
+			int result = await _mediator.Send(command);
+
+			return result > 0 ? Created("Creating Successful.") : BadRequest("Creating Fail.");
+		}
+		catch(Exception ex)
+		{
+			return InternalServerError(ex);
+		}
+	}
 
 }
