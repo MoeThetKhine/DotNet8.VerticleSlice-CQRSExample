@@ -14,6 +14,7 @@
 			if (request.BlogId <= 0)
 				throw new Exception("Blog Id cannot be empty.");
 
+			return await _blogRepository.UpdateBlogAsync(request.BlogRequestModel, request.BlogId);
 		}
 	}
 }
