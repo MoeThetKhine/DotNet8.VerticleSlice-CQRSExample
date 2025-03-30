@@ -1,5 +1,4 @@
-﻿
-namespace DotNet8.VerticleSlice_CQRSExample.Api.Controllers.Blog;
+﻿namespace DotNet8.VerticleSlice_CQRSExample.Api.Controllers.Blog;
 
 [Route("api/[controller]")]
 [ApiController]
