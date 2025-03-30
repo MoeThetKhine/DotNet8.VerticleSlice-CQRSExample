@@ -1,4 +1,6 @@
-﻿namespace DotNet8.VerticleSlice_CQRSExample.Api.Controllers.Blog;
+﻿using DotNet8.VerticleSlice_CQRSExample.Api.Features.Blog.Command.UpdateBlog;
+
+namespace DotNet8.VerticleSlice_CQRSExample.Api.Controllers.Blog;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -70,5 +72,25 @@ public class BlogController : BaseController
 	}
 
 	#endregion
+
+	[HttpPut("{id}")]
+	public async Task<IActionResult> PatchBlog([FromBody] BlogRequestModel requestModel, long id)
+	{
+		try
+		{
+			var command = new UpdateBlogCommand()
+			{
+				BlogRequestModel = requestModel,
+				BlogId = id
+			};
+			int result = await _mediator.Send(command);
+
+			return result > 0 ? Accepted("Updating Successful.");
+		}
+		catch (Exception ex)
+		{
+			return InternalServerError(ex);
+		}
+	}
 
 }
