@@ -1,4 +1,6 @@
-﻿namespace DotNet8.VerticleSlice_CQRSExample.Api.Controllers.Blog;
+﻿using DotNet8.VerticleSlice_CQRSExample.Api.Features.Blog.Command.DeleteBlog;
+
+namespace DotNet8.VerticleSlice_CQRSExample.Api.Controllers.Blog;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -94,5 +96,22 @@ public class BlogController : BaseController
 	}
 
 	#endregion
+
+	[HttpDelete("{id}")]
+	public async Task<IActionResult> DeleteBlog(long id)
+	{
+		try
+		{
+			var command = new DeleteBlogCommand() { BlogId = id };
+			int result = await _mediator.Send(command);
+
+			return result > 0 ? Accepted("Deleting Successful.");
+		}
+		catch(Exception ex)
+		{
+			return InternalServerError(ex);
+		}
+	}
+
 
 }
