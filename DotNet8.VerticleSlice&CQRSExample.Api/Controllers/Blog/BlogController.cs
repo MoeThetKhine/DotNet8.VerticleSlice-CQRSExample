@@ -53,6 +53,8 @@ public class BlogController : BaseController
 
 	#endregion
 
+	#region CreateBlog
+
 	[HttpPost]
 	public async Task<IActionResult> CreateBlog([FromBody] BlogRequestModel requestModel)
 	{
@@ -68,5 +70,7 @@ public class BlogController : BaseController
 			return InternalServerError(ex);
 		}
 	}
+
+	#endregion
 
 }
