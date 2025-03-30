@@ -1,4 +1,5 @@
-﻿using DotNet8.VerticleSlice_CQRSExample.Api.Features.Blog.Queries.GetBlogList;
+﻿using DotNet8.VerticleSlice_CQRSExample.Api.Features.Blog.Queries.GetBlogById;
+using DotNet8.VerticleSlice_CQRSExample.Api.Features.Blog.Queries.GetBlogList;
 
 namespace DotNet8.VerticleSlice_CQRSExample.Api.Controllers.Blog
 {
@@ -32,5 +33,21 @@ namespace DotNet8.VerticleSlice_CQRSExample.Api.Controllers.Blog
 		}
 
 		#endregion
+
+		[HttpGet("{id}")]
+		public async Task<IActionResult> GetBlogById(long id)
+		{
+			try
+			{
+				var query = new GetBlogByIdQuery() { BlogId = id };
+				var item = await _mediator.Send(query);
+
+				return Content(item);
+			}	
+			catch (Exception ex)
+			{
+				return InternalServerError(ex);
+			}
+		}
 	}
 }
