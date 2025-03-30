@@ -59,4 +59,17 @@ public class BlogRepository : IBlogRepository
 
 	#endregion
 
+	public async Task<int> CreateBlogAsync(BlogRequestModel requestModel)
+	{
+		try
+		{
+			await _appDbContext.TblBlogs.AddAsync(requestModel.Change());
+			return await _appDbContext.SaveChangesAsync();
+		}
+		catch (Exception ex)
+		{
+			throw new Exception(ex.Message);
+		}
+	}
+
 }
