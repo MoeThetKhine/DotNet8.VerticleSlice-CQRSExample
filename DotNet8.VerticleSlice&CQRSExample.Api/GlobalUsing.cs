@@ -11,3 +11,4 @@ global using DotNet8.VerticleSlice_CQRSExample.Api.Features.Blog.Queries.GetBlog
 global using DotNet8.VerticleSlice_CQRSExample.Api.Features.Blog.Queries.GetBlogList;
 global using DotNet8.VerticleSlice_CQRSExample.Api.Features.Blog.Command.CreateBlog;
 global using DotNet8.VerticleSlice_CQRSExample.Api.Features.Blog.Command.UpdateBlog;
+global using DotNet8.VerticleSlice_CQRSExample.Api.Features.Blog.Command.DeleteBlog;

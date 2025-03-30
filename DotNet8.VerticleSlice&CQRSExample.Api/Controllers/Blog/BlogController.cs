@@ -1,6 +1,4 @@
-﻿using DotNet8.VerticleSlice_CQRSExample.Api.Features.Blog.Command.DeleteBlog;
-
-namespace DotNet8.VerticleSlice_CQRSExample.Api.Controllers.Blog;
+﻿namespace DotNet8.VerticleSlice_CQRSExample.Api.Controllers.Blog;
 
 [Route("api/[controller]")]
 [ApiController]
