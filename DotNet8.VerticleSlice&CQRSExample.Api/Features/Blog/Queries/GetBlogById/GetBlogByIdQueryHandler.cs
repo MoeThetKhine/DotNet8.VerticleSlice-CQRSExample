@@ -1,5 +1,7 @@
 ﻿namespace DotNet8.VerticleSlice_CQRSExample.Api.Features.Blog.Queries.GetBlogById;
 
+#region GetBlogByIdQueryHandler
+
 public class GetBlogByIdQueryHandler : IRequestHandler<GetBlogByIdQuery, BlogModel>
 {
 	private readonly IBlogRepository _blogRepository;
@@ -17,3 +19,5 @@ public class GetBlogByIdQueryHandler : IRequestHandler<GetBlogByIdQuery, BlogMod
 		return await _blogRepository.GetBlogByIdAsync(request.BlogId);
 	}
 }
+
+#endregion
