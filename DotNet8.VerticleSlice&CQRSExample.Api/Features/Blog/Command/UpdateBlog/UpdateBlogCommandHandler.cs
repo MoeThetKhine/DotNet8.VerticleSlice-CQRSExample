@@ -1,5 +1,7 @@
 ﻿namespace DotNet8.VerticleSlice_CQRSExample.Api.Features.Blog.Command.UpdateBlog;
 
+#region UpdateBlogCommandHandler
+
 public class UpdateBlogCommandHandler : IRequestHandler<UpdateBlogCommand, int>
 {
 	private readonly IBlogRepository _blogRepository;
@@ -17,3 +19,5 @@ public class UpdateBlogCommandHandler : IRequestHandler<UpdateBlogCommand, int>
 		return await _blogRepository.UpdateBlogAsync(request.BlogRequestModel, request.BlogId);
 	}
 }
+
+#endregion
