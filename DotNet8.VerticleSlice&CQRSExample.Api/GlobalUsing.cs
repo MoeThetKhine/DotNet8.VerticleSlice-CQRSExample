@@ -10,3 +10,4 @@ global using MediatR;
 global using DotNet8.VerticleSlice_CQRSExample.Api.Features.Blog.Queries.GetBlogById;
 global using DotNet8.VerticleSlice_CQRSExample.Api.Features.Blog.Queries.GetBlogList;
 global using DotNet8.VerticleSlice_CQRSExample.Api.Features.Blog.Command.CreateBlog;
+global using DotNet8.VerticleSlice_CQRSExample.Api.Features.Blog.Command.UpdateBlog;

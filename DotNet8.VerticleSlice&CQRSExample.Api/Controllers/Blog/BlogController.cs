@@ -1,6 +1,4 @@
-﻿using DotNet8.VerticleSlice_CQRSExample.Api.Features.Blog.Command.UpdateBlog;
-
-namespace DotNet8.VerticleSlice_CQRSExample.Api.Controllers.Blog;
+﻿namespace DotNet8.VerticleSlice_CQRSExample.Api.Controllers.Blog;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -76,7 +74,7 @@ public class BlogController : BaseController
 	#region PatchBlog
 
 	[HttpPut("{id}")]
-	public async Task<IActionResult> PatchBlog([FromBody] BlogRequestModel requestModel, long id)
+	public async Task<IActionResult> UpdateBlog([FromBody] BlogRequestModel requestModel, long id)
 	{
 		try
 		{
