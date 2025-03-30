@@ -34,6 +34,8 @@ namespace DotNet8.VerticleSlice_CQRSExample.Api.Controllers.Blog
 
 		#endregion
 
+		#region GetBlogById
+
 		[HttpGet("{id}")]
 		public async Task<IActionResult> GetBlogById(long id)
 		{
@@ -49,5 +51,8 @@ namespace DotNet8.VerticleSlice_CQRSExample.Api.Controllers.Blog
 				return InternalServerError(ex);
 			}
 		}
+
+		#endregion
+
 	}
 }
