@@ -1,5 +1,7 @@
 ﻿namespace DotNet8.VerticleSlice_CQRSExample.Api.Features.Blog.Command.DeleteBlog;
 
+#region DeleteBlogCommandHandler
+
 public class DeleteBlogCommandHandler : IRequestHandler<DeleteBlogCommand, int>
 {
 	private readonly IBlogRepository _blogRepository;
@@ -17,3 +19,5 @@ public class DeleteBlogCommandHandler : IRequestHandler<DeleteBlogCommand, int>
 		return await _blogRepository.DeleteBlogAsync(request.BlogId);
 	}
 }
+
+#endregion
