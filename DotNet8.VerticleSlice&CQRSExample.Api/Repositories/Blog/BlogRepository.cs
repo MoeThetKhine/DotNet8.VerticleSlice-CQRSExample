@@ -76,4 +76,37 @@ public class BlogRepository : IBlogRepository
 
 	#endregion
 
+	public async Task<int> UpdateBlogAsync(BlogRequestModel request, long id)
+	{
+		try
+		{
+			var item = await _appDbContext.TblBlogs
+				.AsNoTracking()
+				.FirstOrDefaultAsync(x => x.BlogId == id) ?? throw new Exception("Blog Id cannot be empty.");
+
+			if (!string.IsNullOrEmpty(request.BlogTitle))
+			{
+				item.BlogTitle = request.BlogTitle;
+			}
+
+			if (!string.IsNullOrEmpty(request.BlogAuthor))
+			{
+				item.BlogAuthor = request.BlogAuthor;
+			}
+
+			if (!string.IsNullOrEmpty(request.BlogContent))
+			{
+				item.BlogContent = request.BlogContent;
+			}
+
+			_appDbContext.Entry(item).State = EntityState.Modified;
+
+			return await _appDbContext.SaveChangesAsync();
+		}
+		catch(Exception ex)
+		{
+			throw new Exception(ex.Message);
+		}
+	}
+
 }
