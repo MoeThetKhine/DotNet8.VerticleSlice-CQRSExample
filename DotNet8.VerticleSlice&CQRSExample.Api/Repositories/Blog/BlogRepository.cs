@@ -113,4 +113,23 @@ public class BlogRepository : IBlogRepository
 
 	#endregion
 
+	public async Task<int> DeleteBlogAsync(long id)
+	{
+		try
+		{
+			var item = await _appDbContext.TblBlogs
+				.AsNoTracking()
+				.FirstOrDefaultAsync(x => x.BlogId == id) ?? throw new("No Data Found.");
+
+			_appDbContext.TblBlogs.Remove(item);
+
+			return await _appDbContext.SaveChangesAsync();
+		}
+
+		catch(Exception ex)
+		{
+			throw new Exception(ex.Message);
+		}
+	}
+
 }
