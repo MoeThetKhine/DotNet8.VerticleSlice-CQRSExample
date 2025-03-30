@@ -1,7 +1,4 @@
-﻿using DotNet8.VerticleSlice_CQRSExample.Api.Features.Blog.Queries.GetBlogById;
-using DotNet8.VerticleSlice_CQRSExample.Api.Features.Blog.Queries.GetBlogList;
-
-namespace DotNet8.VerticleSlice_CQRSExample.Api.Controllers.Blog;
+﻿namespace DotNet8.VerticleSlice_CQRSExample.Api.Controllers.Blog;
 
 [Route("api/[controller]")]
 [ApiController]
