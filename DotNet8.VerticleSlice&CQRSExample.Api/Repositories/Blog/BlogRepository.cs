@@ -113,6 +113,8 @@ public class BlogRepository : IBlogRepository
 
 	#endregion
 
+	#region DeleteBlogAsync
+
 	public async Task<int> DeleteBlogAsync(long id)
 	{
 		try
@@ -131,5 +133,7 @@ public class BlogRepository : IBlogRepository
 			throw new Exception(ex.Message);
 		}
 	}
+
+	#endregion
 
 }
