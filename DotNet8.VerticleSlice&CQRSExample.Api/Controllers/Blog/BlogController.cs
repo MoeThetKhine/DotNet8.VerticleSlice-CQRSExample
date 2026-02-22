@@ -85,7 +85,7 @@ public class BlogController : BaseController
 			};
 			int result = await _mediator.Send(command);
 
-			return result > 0 ? Accepted("Updating Successful.");
+			return result > 0 ? Accepted();
 		}
 		catch (Exception ex)
 		{
