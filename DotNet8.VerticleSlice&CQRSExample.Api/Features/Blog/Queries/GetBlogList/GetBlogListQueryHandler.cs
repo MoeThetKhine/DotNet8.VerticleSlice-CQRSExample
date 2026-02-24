@@ -15,6 +15,6 @@ public class GetBlogListQueryHandler : IRequestHandler<GetBlogListQuery, BlogLis
 	{
 		return await _blogRepository.GetBlogsAsync();
 	}
-}
+}  /
 
 #endregion
