@@ -86,6 +86,8 @@ public class BlogRepository : IBlogRepository
 				.AsNoTracking()
 				.FirstOrDefaultAsync(x => x.BlogId == id) ?? throw new Exception("Blog Id cannot be empty.");
 
+			#region Validation
+
 			if (!string.IsNullOrEmpty(request.BlogTitle))
 			{
 				item.BlogTitle = request.BlogTitle;
@@ -100,6 +102,8 @@ public class BlogRepository : IBlogRepository
 			{
 				item.BlogContent = request.BlogContent;
 			}
+
+			#endregion
 
 			_appDbContext.Entry(item).State = EntityState.Modified;
 
