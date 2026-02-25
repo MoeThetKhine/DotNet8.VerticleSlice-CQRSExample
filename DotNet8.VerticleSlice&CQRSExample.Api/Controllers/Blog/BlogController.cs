@@ -48,7 +48,6 @@ public class BlogController : BaseController
 			return InternalServerError(ex);
 		}
 	}
-
 	#endregion
 
 	#region CreateBlog
