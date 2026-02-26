@@ -104,7 +104,7 @@ public class BlogController : BaseController
 			var command = new DeleteBlogCommand() { BlogId = id };
 			int result = await _mediator.Send(command);
 
-			return result > 0 ? Accepted("Deleting Successful.");
+			return result > 0 ? Accepted("Deleting Successful.") : BadRequest("Deleting Fail.");
 		}
 		catch(Exception ex)
 		{
