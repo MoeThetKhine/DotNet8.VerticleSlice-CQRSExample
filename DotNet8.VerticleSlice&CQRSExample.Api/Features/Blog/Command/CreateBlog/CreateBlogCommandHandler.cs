@@ -11,6 +11,8 @@ public class CreateBlogCommandHandler : IRequestHandler<CreateBlogCommand , int>
 		_blogRepository = blogRepository;
 	}
 
+	#region Handle
+
 	public async Task<int> Handle(CreateBlogCommand request, CancellationToken cancellationToken)
 	{
 		if (string.IsNullOrEmpty(request.BlogRequestModel.BlogTitle))
@@ -24,6 +26,9 @@ public class CreateBlogCommandHandler : IRequestHandler<CreateBlogCommand , int>
 
 		return await _blogRepository.CreateBlogAsync(request.BlogRequestModel);
 	}
+
+	#endregion
+
 }
 
 #endregion
