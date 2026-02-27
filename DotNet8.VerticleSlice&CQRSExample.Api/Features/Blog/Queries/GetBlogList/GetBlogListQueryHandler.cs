@@ -11,10 +11,15 @@ public class GetBlogListQueryHandler : IRequestHandler<GetBlogListQuery, BlogLis
 		_blogRepository = blogRepository;
 	}
 
+	#region Handle
+
 	public async Task<BlogListResponseModel> Handle(GetBlogListQuery request, CancellationToken cancellationToken)
 	{
 		return await _blogRepository.GetBlogsAsync();
 	}
-}  /
+
+	#endregion
+
+}
 
 #endregion
