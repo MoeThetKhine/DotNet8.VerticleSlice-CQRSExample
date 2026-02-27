@@ -11,6 +11,8 @@ public class UpdateBlogCommandHandler : IRequestHandler<UpdateBlogCommand, int>
 		_blogRepository = blogRepository;
 	}
 
+	#region Handle
+
 	public async Task<int> Handle(UpdateBlogCommand request, CancellationToken cancellationToken)
 	{
 		if (request.BlogId <= 0)
@@ -18,6 +20,9 @@ public class UpdateBlogCommandHandler : IRequestHandler<UpdateBlogCommand, int>
 
 		return await _blogRepository.UpdateBlogAsync(request.BlogRequestModel, request.BlogId);
 	}
+
+	#endregion
+
 }
 
 #endregion
