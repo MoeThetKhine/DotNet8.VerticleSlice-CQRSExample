@@ -11,6 +11,8 @@ public class GetBlogByIdQueryHandler : IRequestHandler<GetBlogByIdQuery, BlogMod
 		_blogRepository = blogRepository;
 	}
 
+	#region Handle
+
 	public async Task<BlogModel> Handle(GetBlogByIdQuery request, CancellationToken cancellationToken)
 	{
 		if (request.BlogId <= 0)
@@ -18,6 +20,8 @@ public class GetBlogByIdQueryHandler : IRequestHandler<GetBlogByIdQuery, BlogMod
 
 		return await _blogRepository.GetBlogByIdAsync(request.BlogId);
 	}
+
+	#endregion
 }
 
 #endregion
